@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <title>Usuarios</title>
+</head>
+<body>
+    <section class="section section__table">
+        <h1>Todos los usuarios</h1>
+        <a class="btn__solid" href="/users/create">
+            Crear un usuario nuevo
+        </a>
+        <table class="table">
+            <thead>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Edad</td>
+            </thead>
+            <% persons.forEach((person)=>{ %>
+            <tr>
+                <td><%= person.id %> </td>
+                <td><%= person.name %> </td>
+                <td><%= person.age %> </td>
+                <td> 
+                    <a class="btn-form" href="/users/edit/<%= person.id %>">EDITAR</a>
+                </td>
+                <td> 
+                    <a class="btn-form" href="/users/delete/<%= person.id %>">ELIMINAR</a>
+                </td>
+            </tr>
+            <% }) %>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+:root{
+    --font--primary: Source Sans Pro;
+}
+body{
+    background-color: rgb(218, 188, 139);    
+    font-family: var(--font--primary);
+}
+h1{
+    color: #2f0e0b;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+}
+
+.btn__solid{
+    background-color: rgb(248, 248, 217);
+    color: brown;
+    padding: 15px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    max-width: fit-content;
+    transition-property:box-shadow;
+    box-shadow: 6px 6px 0px brown;   
+    transition: .4s ease-in-out;
+}
+.btn__solid:hover{    
+    transition-property:box-shadow scale;
+    transform: scale(0.999);
+    box-shadow: 3px 2px 0px brown;
+    transition: .4s all ease-in-out;
+}
+.table{
+    background-color: rgb(235, 235, 235);
+    max-width: fit-content;
+    padding: 2rem 2rem;
+    border-radius: 8px;   
+}
+.table tr{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: .2rem .8rem;
+}
+.table  tr  td{
+    font-weight: 400;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.table  thead tr{
+    border-bottom: 1px solid rgba(185, 185, 185);
+}
+.table  tr  td:nth-child(1){
+    min-width: 2rem;
+}
+.table  tr  td:nth-child(2){
+    min-width: 8rem;
+}
+.table  tr  td:nth-child(3){
+    min-width: 5rem;
+}
+.table  tr  td:nth-child(4),td:nth-child(5){
+    min-width: 5rem;
+}
+.table  thead  td{
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.table tr{
+    display: flex;
+    flex-direction: row;
+    
+}
+.table tr td{
+    padding:.5rem 1rem;
+}

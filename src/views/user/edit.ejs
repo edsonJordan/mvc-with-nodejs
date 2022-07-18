@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <title>Document</title>
+</head>
+<body>
+        <section class="section section__form">
+            <h1>Crear Usuario</h1>
+            <form class="form" action="/users/update/<%= person[0]['id'] %>" method="post">
+                    <div class="block-form">
+                        <label for="name" class="name">
+                            Nombre  
+                        </label>
+                        <input type="text" value="<%= person[0]['name'] %>" name="name" id="name" required>
+                    </div>
+    
+                    <div class="block-form">
+                        <label for="age" class="name">
+                            Edad  
+                        </label>
+                        <input type="text" value="<%= person[0]['age'] %>" name="age" id="age" required>
+                    </div>
+    
+                    <div class="block-form">
+                        <input class="btn-submit" type="submit" value="Editar">
+                    </div>
+                
+                
+            </form>
+        </section>
+</body>
+</html>
