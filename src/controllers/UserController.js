@@ -1,17 +1,11 @@
 const model = require('../models/UserModel');
-const connection = require('../database/Connection');
 const UserModel = new model();
-const users = [
-    {id:1,  nombre: "edson", edad: 27},
-    {id:2,  nombre: "juanito", edad: 17},
-    {id:3,  nombre: "rubi", edad: 40}
-];
 
 module.exports = class UserController {
     constructor(){
     }
     index = (req, res)=>{
-        UserModel.showUsers((result)=>{
+        UserModel.showUsers((result)=>{            
             res.render('index', {persons: result});            
         });
     }

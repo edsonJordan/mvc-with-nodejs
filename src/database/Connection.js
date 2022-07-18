@@ -1,19 +1,27 @@
 const mysql = require('mysql');
+const mongoose = require('mongoose')
 const config = require('./Config');
-const DB = new config("localhost", "root", 'practica_nodejs', "");
+const DB = new config("localhost", "root", 'practica_nodejs', "", 27017);
 
-const connection = mysql.createConnection(DB.getConfig());
+//conecction databse mysql
 
-connection.connect((err, conn)=>{
+/* const connection = mysql.createConnection(DB.mySql());
+ connection.connect((err, conn)=>{
    if(!err){
-    return console.log("conexion a bd");
+    return console.log("conexion a bd exitosa");
    }
-    return console.log("Error conexion a bd");
-})
-/* try {
-    connection
-} catch (err) {
-    console.log("error al conectarse");
-}
- */
+    return console.log("Error conexion a bd"+ err);
+}) */
+
+//conection database mongoDb
+
+const connection = mongoose.connect(DB.mongDb())
+.then((db)=>{
+    console.log("conexion a bd exitosa");
+}).catch((err)=>{
+    console.log('ha ocurrido un error');
+});
+
+
+
 module.exports = connection
